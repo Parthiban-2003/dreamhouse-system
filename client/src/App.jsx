@@ -1,14 +1,13 @@
-import './App.css'
+import AppRoutes from "./routes/AppRoutes";
+import { AuthProvider } from "./context/AuthContext";
+import './App.css';
 
 function App() {
-
   return (
-    <>
-      <div>
-        <p className='underline'>Hello, Vite + React!</p>
-      </div>
-    </>
-  )
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
